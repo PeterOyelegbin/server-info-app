@@ -38,7 +38,7 @@
 <body>
     <div class="container">
         <h1>AltSchool 2nd Semester Exam | Peter Oyelegbin</h1>
-        <h3>Server Information</h3>
+        <h3>🖥️ Server Information</h3>
         <p>This page is hosted on:</p>
         <div class="ip-address" id="ipAddress">Loading...</div>
         
@@ -46,20 +46,10 @@
             <h3>Hosting Type: <span id="hostingType">EC2 Instance</span></h3>
             <p>This application is running on an EC2 instance with NGINX web server.</p>
         </div>
-        
+
         <script>
-            // Get client IP address
-            async function getIPAddress() {
-                try {
-                    const response = await fetch('https://api.ipify.org?format=json');
-                    const data = await response.json();
-                    document.getElementById('ipAddress').textContent = data.ip;
-                } catch (error) {
-                    document.getElementById('ipAddress').textContent = 'Unable to retrieve IP';
-                }
-            }
-            
-            getIPAddress();
+            // Display the server's IP address
+            document.getElementById('ipAddress').textContent = "<?php echo $_SERVER['SERVER_ADDR']; ?>";
         </script>
     </div>
 </body>
