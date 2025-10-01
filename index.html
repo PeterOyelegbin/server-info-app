@@ -40,17 +40,12 @@
         <h1>AltSchool 2nd Semester Exam | Peter Oyelegbin</h1>
         <h3>🖥️ Server Information</h3>
         <p>This page is hosted on:</p>
-        <div class="ip-address" id="ipAddress">Loading...</div>
+        <div class="ip-address">SERVER_PUBLIC_IP</div>
         
         <div class="hosting-type">
             <h3>Hosting Type: <span id="hostingType">EC2 Instance</span></h3>
             <p>This application is running on an EC2 instance with NGINX web server.</p>
         </div>
-
-        <script>
-            // Display the server's IP address
-            document.getElementById('ipAddress').textContent = "<?php echo $_SERVER['SERVER_ADDR']; ?>";
-        </script>
     </div>
 </body>
 </html>
